@@ -1,0 +1,488 @@
+/* ================================
+   SitePilot AI — Timeline Page
+   ================================ */
+
+.timeline-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #172033;
+}
+
+.timeline-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.timeline-eyebrow {
+  margin: 0 0 6px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.timeline-page-title {
+  margin: 0;
+  color: #172033;
+  font-size: 27px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.timeline-subtitle {
+  margin: 8px 0 0;
+  color: #718096;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.timeline-project-selector {
+  padding: 18px 20px;
+  border: 1px solid #e4eaf2;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 3%);
+}
+
+.timeline-project-selector label,
+.timeline-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.timeline-project-selector select,
+.timeline-form input,
+.timeline-form select,
+.timeline-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dbe3ee;
+  border-radius: 9px;
+  background: #fff;
+  padding: 11px 12px;
+  color: #172033;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.timeline-project-selector select {
+  max-width: 560px;
+  margin-top: 9px;
+}
+
+.timeline-project-selector select:focus,
+.timeline-form input:focus,
+.timeline-form select:focus,
+.timeline-form textarea:focus {
+  border-color: #5788f5;
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 10%);
+}
+
+.timeline-project-selector select:disabled {
+  cursor: not-allowed;
+  background: #f8fafc;
+}
+
+.timeline-notice {
+  padding: 13px 16px;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 13px;
+}
+
+.timeline-notice.error {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.timeline-notice.success {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.timeline-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.timeline-summary-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #e5eaf2;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 3%);
+}
+
+.timeline-summary-label {
+  margin: 0;
+  color: #718096;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.timeline-summary-value {
+  margin: 12px 0 0;
+  color: #172033;
+  font-size: 28px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+.timeline-summary-card.warning .timeline-summary-value {
+  color: #dc4242;
+}
+
+.timeline-panel {
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid #e4eaf2;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 3px 14px rgb(15 23 42 / 3%);
+}
+
+.timeline-panel-heading {
+  margin-bottom: 20px;
+}
+
+.timeline-panel-title {
+  margin: 0;
+  color: #172033;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.timeline-panel-description {
+  margin: 7px 0 0;
+  color: #8290a3;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.timeline-financial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.timeline-financial-card {
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid #e8edf5;
+  border-radius: 12px;
+  background: #f8faff;
+}
+
+.timeline-financial-label {
+  margin: 0;
+  color: #718096;
+  font-size: 12px;
+}
+
+.timeline-financial-value {
+  overflow-wrap: anywhere;
+  margin: 10px 0 0;
+  color: #172033;
+  font-size: 21px;
+  font-weight: 750;
+}
+
+.timeline-budget-section {
+  margin-top: 24px;
+}
+
+.timeline-budget-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.timeline-budget-heading strong {
+  color: #172033;
+}
+
+.timeline-budget-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e9eef6;
+}
+
+.timeline-budget-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #3975ed;
+  transition: width 0.3s ease;
+}
+
+.timeline-budget-fill.over-budget {
+  background: #dc4242;
+}
+
+.timeline-over-budget-message {
+  margin: 10px 0 0;
+  color: #dc4242;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.timeline-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 19px;
+}
+
+.timeline-form .full-width {
+  grid-column: 1 / -1;
+}
+
+.timeline-form textarea {
+  min-height: 95px;
+  resize: vertical;
+}
+
+.timeline-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  grid-column: 1 / -1;
+}
+
+.timeline-primary-button,
+.timeline-secondary-button,
+.timeline-refresh-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 17px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.timeline-primary-button {
+  background: #2864df;
+  color: #fff;
+}
+
+.timeline-primary-button:hover {
+  background: #1d4fc0;
+}
+
+.timeline-secondary-button,
+.timeline-refresh-button {
+  border-color: #dbe3ee;
+  background: #fff;
+  color: #475569;
+}
+
+.timeline-secondary-button:hover,
+.timeline-refresh-button:hover {
+  background: #f8fafc;
+}
+
+.timeline-primary-button:disabled,
+.timeline-refresh-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.timeline-schedule-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.timeline-milestone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.timeline-milestone {
+  padding: 19px;
+  border: 1px solid #e5eaf2;
+  border-radius: 12px;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.timeline-milestone:hover {
+  border-color: #c9d8f6;
+  box-shadow: 0 4px 14px rgb(15 23 42 / 4%);
+}
+
+.timeline-milestone-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.timeline-milestone-title {
+  margin: 0;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.timeline-milestone-description {
+  margin: 8px 0 0;
+  color: #718096;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.timeline-milestone-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-top: 14px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.timeline-badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.timeline-status-badge,
+.timeline-overdue-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.timeline-status-not-started {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.timeline-status-in-progress {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.timeline-status-completed {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.timeline-status-on-hold {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.timeline-overdue-badge {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.timeline-empty-state {
+  padding: 38px 15px;
+  text-align: center;
+}
+
+.timeline-empty-state h3 {
+  margin: 0;
+  color: #334155;
+  font-size: 14px;
+}
+
+.timeline-empty-state p {
+  margin: 8px 0 0;
+  color: #8290a3;
+  font-size: 12px;
+}
+
+.timeline-loading {
+  padding: 30px 10px;
+  color: #718096;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .timeline-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .timeline-page {
+    gap: 17px;
+  }
+
+  .timeline-page-title {
+    font-size: 23px;
+  }
+
+  .timeline-summary-grid,
+  .timeline-financial-grid,
+  .timeline-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .timeline-panel {
+    padding: 17px;
+  }
+
+  .timeline-summary-card {
+    padding: 16px;
+  }
+
+  .timeline-form .full-width,
+  .timeline-form-actions {
+    grid-column: auto;
+  }
+
+  .timeline-milestone-main {
+    flex-direction: column;
+  }
+
+  .timeline-badge-group {
+    justify-content: flex-start;
+  }
+
+  .timeline-financial-value {
+    font-size: 19px;
+  }
+}

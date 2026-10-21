@@ -1,0 +1,43 @@
+﻿# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local databases and backups
+backend/sitepilot.db
+backend/*.db-wal
+backend/*.db-shm
+backend/quality_backup/
+backend/main_before_*.py
+backend/sitepilot.db-*
+SitePilotAI_backup_*/
+
+# Local SQLite database backups
+backend/*.db
+backend/*.db-*
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local source snapshots
+frontend/src/*_before_*.tsx
+frontend/src/*_before_*.ts

@@ -1,0 +1,246 @@
+
+.projects-page {
+  width: 100%;
+  min-width: 0;
+}
+
+.projects-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 8px 0 22px;
+}
+
+.projects-toolbar h3 {
+  margin: 0 0 6px;
+  color: #172b3a;
+  font-size: 18px;
+}
+
+.projects-toolbar p {
+  margin: 0;
+  color: #718096;
+  font-size: 13px;
+}
+
+.projects-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 0 14px;
+  min-height: 46px;
+  border: 1px solid #e0e7ed;
+  border-radius: 10px;
+  background: #fff;
+  color: #718096;
+}
+
+.projects-search > span {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.projects-search input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #243746;
+  font: inherit;
+  font-size: 14px;
+}
+
+.projects-search:focus-within {
+  border-color: #269b78;
+  box-shadow: 0 0 0 3px rgb(38 155 120 / 10%);
+}
+
+.projects-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e7edf1;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.projects-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.projects-table th {
+  padding: 15px 16px;
+  background: #f7f9fb;
+  color: #718096;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.projects-table td {
+  padding: 17px 16px;
+  border-top: 1px solid #edf1f4;
+  color: #425466;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.projects-table tbody tr:hover {
+  background: #fbfdfc;
+}
+
+.project-name-button {
+  display: block;
+  max-width: 240px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #1b3446;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.project-name-button:hover {
+  color: #16845f;
+}
+
+.project-location {
+  display: block;
+  margin-top: 5px;
+  color: #8492a0;
+  font-size: 12px;
+}
+
+.table-progress {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 105px;
+}
+
+.table-progress > span {
+  min-width: 35px;
+  color: #425466;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.table-progress-track {
+  width: 60px;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e8efec;
+}
+
+.table-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #27a879;
+  transition: width 0.2s ease;
+}
+
+.projects-empty {
+  padding: 38px 20px !important;
+  color: #718096 !important;
+  text-align: center;
+}
+
+.projects-footnote {
+  margin: 14px 0 0;
+  color: #8995a2;
+  font-size: 12px;
+}
+
+.project-form-panel {
+  margin-bottom: 24px;
+}
+
+.project-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.project-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #405364;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.project-form-grid input,
+.project-form-grid select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #dce4e9;
+  border-radius: 8px;
+  background: #fff;
+  color: #243746;
+  font: inherit;
+  font-size: 13px;
+}
+
+.project-form-grid input:focus,
+.project-form-grid select:focus {
+  outline: none;
+  border-color: #269b78;
+  box-shadow: 0 0 0 3px rgb(38 155 120 / 10%);
+}
+
+.project-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.coming-soon-panel {
+  margin-top: 10px;
+  padding: 26px;
+}
+
+.coming-soon-panel h3 {
+  margin-top: 0;
+  color: #172b3a;
+}
+
+.coming-soon-panel p {
+  max-width: 620px;
+  color: #718096;
+  line-height: 1.7;
+}
+
+.coming-soon-panel .primary-button {
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  .projects-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .projects-table {
+    min-width: 700px;
+  }
+
+  .project-form-grid {
+    grid-template-columns: 1fr;
+  }
+}

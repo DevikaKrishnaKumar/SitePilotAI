@@ -1,0 +1,276 @@
+.materials-page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+
+.materials-project-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px;
+  border: 1px solid #e3e9e5;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.materials-project-bar h3,
+.materials-panel .panel-heading h3 {
+  margin: 0;
+  color: #1c3028;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.materials-project-bar p,
+.materials-panel .panel-heading p {
+  margin: 7px 0 0;
+  color: #78847e;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.materials-project-bar label,
+.materials-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #47584f;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.materials-project-bar select,
+.materials-form input,
+.materials-form select,
+.materials-form textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #dce5df;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px 11px;
+  color: #24362d;
+  font: inherit;
+  font-size: 13px;
+}
+
+.materials-project-bar select {
+  min-width: 230px;
+  margin-top: 5px;
+}
+
+.materials-form input:focus,
+.materials-form select:focus,
+.materials-form textarea:focus,
+.materials-project-bar select:focus {
+  outline: 2px solid #b7dfca;
+  border-color: #26966c;
+}
+
+.materials-form textarea {
+  resize: vertical;
+}
+
+.materials-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.materials-metric {
+  padding: 21px;
+  border: 1px solid #e3e9e5;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.materials-metric > span {
+  display: block;
+  color: #728078;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.materials-metric > strong {
+  display: block;
+  margin-top: 12px;
+  color: #203b2e;
+  font-size: 27px;
+  overflow-wrap: anywhere;
+}
+
+.materials-metric > strong.low-stock-number {
+  color: #c24f43;
+}
+
+.materials-metric > p {
+  margin: 7px 0 0;
+  color: #89938d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.materials-forms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px;
+}
+
+.materials-panel {
+  min-width: 0;
+  padding: 22px;
+}
+
+.materials-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-top: 22px;
+}
+
+.materials-input-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.materials-form .primary-button {
+  align-self: flex-start;
+  margin-top: 2px;
+}
+
+.materials-message {
+  padding: 13px 16px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.materials-error {
+  border: 1px solid #f0cccc;
+  background: #fff5f4;
+  color: #a23d37;
+}
+
+.materials-success {
+  border: 1px solid #c9e9d7;
+  background: #f1fbf5;
+  color: #26774e;
+}
+
+.materials-table-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.materials-table-wrap {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.materials-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 12px;
+}
+
+.materials-table th {
+  padding: 13px 12px;
+  border-bottom: 1px solid #e4eae6;
+  background: #f7f9f8;
+  color: #68776e;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.materials-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #edf1ee;
+  color: #46564d;
+  vertical-align: middle;
+}
+
+.materials-table td strong {
+  display: block;
+  color: #233a2e;
+  font-size: 12px;
+}
+
+.materials-table td small {
+  display: block;
+  margin-top: 4px;
+  color: #89938d;
+  font-size: 11px;
+}
+
+.stock-status {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px 9px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.stock-status-ok {
+  background: #e8f7ee;
+  color: #26764d;
+}
+
+.stock-status-low {
+  background: #fff0e9;
+  color: #b74b36;
+}
+
+.stock-status-used {
+  background: #edf1ff;
+  color: #4a5fa7;
+}
+
+.materials-empty {
+  padding: 30px 12px !important;
+  color: #87928b !important;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .materials-forms-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .materials-project-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .materials-project-bar select {
+    min-width: 0;
+  }
+
+  .materials-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .materials-input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .materials-panel {
+    padding: 16px;
+  }
+
+  .materials-table-heading {
+    align-items: flex-start;
+  }
+}
